@@ -9,7 +9,6 @@
 int minCost = 9999999;
 int *minPath;
 
-
 /* Problema do caixeiro viajante (TSP) - Algoritmo Forca Bruta
 *
 * costMatrix: Matriz com os custos (pesos) das arestas.
@@ -31,10 +30,10 @@ void TSP_BruteForce(double **costMatrix, int *ListOfCities, int i, int n)
 		sum += (int)costMatrix[ ListOfCities[j] ][ 0 ];      /* retorno: distancia entre a cidade de partida e a de chegada - ListOfCities[n] */
 		
 		
-//		for ( j = 0; j <  n; j++ )              /* testa todas as permutacoes com a cidade ListOfCities[0] fixa */
-//			printf("%d", ListOfCities[j]);
+		for ( j = 0; j <  n; j++ )              /* testa todas as permutacoes com a cidade ListOfCities[0] fixa */
+			printf("%d", ListOfCities[j]);
 		
-//		printf("      "); 
+		printf("      "); 
 		
 		
 		if (sum <= minCost) { /* Atualiza-se o custo e caminho minimos, se necessário */
@@ -76,7 +75,7 @@ int main (void) {
 		
 	TSP_BruteForce(M, ListOfCities, 1, Ncities);
 	 
-	printf("Custo Minimo: %d\n", minCost);
+	printf("\nCusto Minimo: %d\n", minCost);
 		
 	return 0;
 }
