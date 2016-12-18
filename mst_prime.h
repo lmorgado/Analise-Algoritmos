@@ -1,0 +1,1 @@
+void MST_PRIM (double** graph, int *PI, int n);
